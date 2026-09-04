@@ -1,0 +1,308 @@
+/* Hamanako Unagi — Japanese Modern */
+:root{
+  --ink:#1a1a18;
+  --ink2:#3a332e;
+  --paper:#fdfaf6;
+  --cream:#f5ece0;
+  --gold:#c8a24a;
+  --gold2:#a67c2e;
+  --vermilion:#b93a2c;
+  --indigo:#1b2a4a;
+  --lake:#2a6b8a;
+  --line:#e8ddd0;
+  --radius:16px;
+  --shadow:0 12px 40px rgba(26,26,24,.10);
+  --shadow2:0 20px 60px rgba(26,26,24,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{
+  margin:0;
+  font-family:"Zen Kaku Gothic New","Noto Serif JP",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* Header */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  background:rgba(253,250,246,.88);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid rgba(232,221,208,.8);
+  transition:.3s;
+}
+.header.is-scrolled{box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.header__inner{
+  max-width:1180px;margin:0 auto;
+  height:68px;display:flex;align-items:center;gap:24px;
+  padding:0 20px;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo__mark{
+  width:42px;height:42px;display:grid;place-items:center;
+  background:var(--ink);color:var(--paper);
+  font-family:"Shippori Mincho",serif;font-weight:700;font-size:20px;
+  border-radius:10px;
+}
+.logo__title{font-family:"Shippori Mincho",serif;font-weight:700;font-size:16px;letter-spacing:.08em;line-height:1}
+.logo__sub{font-size:10px;letter-spacing:.18em;color:#8a7e74;line-height:1}
+.nav{margin-left:auto;display:flex;gap:22px;font-size:14px;letter-spacing:.04em}
+.nav a{position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);transform:scaleX(0);transition:.25s}
+.nav a:hover::after{transform:scaleX(1)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;
+  border:1px solid transparent;transition:.2s;cursor:pointer;letter-spacing:.04em;
+}
+.btn--primary{background:var(--ink);color:var(--paper)}
+.btn--primary:hover{background:#000;transform:translateY(-1px)}
+.btn--ghost{border-color:rgba(26,26,24,.22);background:rgba(255,255,255,.6)}
+.btn--ghost:hover{background:#fff}
+.btn--ghost-dark{border-color:rgba(255,255,255,.6);color:#fff;background:transparent}
+.btn--ghost-dark:hover{background:rgba(255,255,255,.12)}
+.btn--dark{background:var(--indigo);color:#fff}
+.btn--dark:hover{background:#12203a}
+.btn--sm{padding:8px 16px;font-size:13px}
+.btn--lg{padding:14px 28px;font-size:15px}
+.header__cta{margin-left:8px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+
+/* Hero */
+.hero{
+  position:relative;min-height:88vh;display:grid;place-items:center;
+  overflow:hidden;padding:100px 20px 60px;
+  background:#0f1e2e;
+}
+.hero__bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(800px 400px at 70% 20%, rgba(200,162,74,.22), transparent 60%),
+    radial-gradient(600px 600px at 20% 80%, rgba(42,107,138,.30), transparent 60%),
+    linear-gradient(180deg, #0f2438 0%, #1a3a52 45%, #2a5a6a 100%);
+}
+.hero__bg::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg, transparent 0 120px, rgba(255,255,255,.03) 120px 121px);
+  opacity:.6;
+}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.34))}
+.hero__content{position:relative;z-index:1;max-width:780px;text-align:center;color:#fff}
+.hero__eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:.28em;
+  border:1px solid rgba(255,255,255,.5);padding:6px 14px;border-radius:999px;
+  background:rgba(255,255,255,.08);backdrop-filter:blur(6px)
+}
+.hero__title{
+  font-family:"Shippori Mincho",serif;font-weight:700;
+  font-size:clamp(32px,6vw,54px);line-height:1.15;margin:18px 0 14px;letter-spacing:.04em;
+  text-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+.hero__title span{display:block}
+.hero__accent{color:#f0d48a}
+.hero__desc{color:rgba(255,255,255,.88);font-size:clamp(14px,2.2vw,16px);margin:0 0 26px}
+.hero__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero__stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  margin-top:28px;padding:16px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);border-radius:16px;backdrop-filter:blur(10px)
+}
+.stat{text-align:center}
+.stat__num{font-family:"Shippori Mincho",serif;font-weight:700;font-size:22px;display:block;line-height:1}
+.stat__label{font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.8)}
+.stat__label small{display:block;font-size:10px;opacity:.7}
+.hero__scroll{
+  position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+  font-size:10px;letter-spacing:.3em;color:rgba(255,255,255,.7);
+}
+.hero__scroll::after{
+  content:"";display:block;width:1px;height:28px;margin:6px auto 0;background:rgba(255,255,255,.5)
+}
+.band{background:var(--ink);color:var(--paper);text-align:center;padding:12px 16px;font-size:13px;letter-spacing:.14em}
+.band__inner{max-width:1180px;margin:0 auto}
+
+/* Sections */
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+.section{padding:72px 0}
+.section--dark{background:var(--ink);color:var(--paper)}
+.section--cream{background:var(--cream)}
+.section-head{text-align:center;max-width:680px;margin:0 auto 40px}
+.kicker{font-size:11px;letter-spacing:.32em;color:var(--gold2);margin:0 0 8px;font-weight:700}
+.kicker--light{color:#f0d48a}
+.section-title{font-family:"Shippori Mincho",serif;font-size:clamp(24px,3.6vw,32px);line-height:1.3;margin:0 0 10px;letter-spacing:.05em}
+.section-title--light{color:#fff}
+.section-lead{color:#6b625c;margin:0;font-size:14px}
+.section--dark .section-lead{color:rgba(255,255,255,.7)}
+.section-head--light .section-title{color:#fff}
+
+/* Story */
+.story{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+.timeline{display:grid;gap:22px}
+.tl{border-left:3px solid var(--line);padding-left:18px;position:relative}
+.tl::before{content:"";position:absolute;left:-7px;top:6px;width:11px;height:11px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 4px rgba(200,162,74,.18)}
+.tl__year{font-size:12px;letter-spacing:.16em;color:var(--gold2);font-weight:700}
+.tl h3{margin:4px 0 6px;font-size:16px;font-family:"Shippori Mincho",serif}
+.tl p{margin:0;color:#5a524c;font-size:14px}
+.quote{
+  margin-top:22px;background:var(--cream);border-left:4px solid var(--gold);
+  padding:16px 18px;border-radius:10px;
+}
+.quote p{margin:0;font-family:"Shippori Mincho",serif;font-weight:700}
+.quote span{font-size:12px;color:#8a7e74}
+.lake-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)
+}
+.lake-img{height:160px;display:grid;place-items:center;font-size:64px;background:linear-gradient(135deg,#dbeaf2,#a8cfe0)}
+.lake-info{padding:18px}
+.lake-info h4{margin:0 0 6px;font-family:"Shippori Mincho",serif}
+.lake-info p{margin:0;color:#5a524c;font-size:13px}
+.lake-meta{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:6px;font-size:13px}
+.lake-meta li{padding:8px 10px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;box-shadow:var(--shadow)}
+.mini span{font-size:22px}
+.mini p{margin:6px 0 0;font-size:12px;font-weight:700}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:22px}
+.feat__icon{width:48px;height:48px;display:grid;place-items:center;background:rgba(240,212,138,.14);border:1px solid rgba(240,212,138,.3);border-radius:12px;font-size:22px}
+.feat h3{margin:14px 0 8px;font-family:"Shippori Mincho",serif;font-size:16px;color:#fff}
+.feat p{margin:0;color:rgba(255,255,255,.72);font-size:13px}
+.compare{margin-top:22px;display:grid;grid-template-columns:1.6fr .8fr;gap:18px}
+.compare__table{background:#fff;color:var(--ink);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.compare__table h4{margin:0 0 12px;font-family:"Shippori Mincho",serif}
+.compare__table table{width:100%;border-collapse:collapse;font-size:13px}
+.compare__table th,.compare__table td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}
+.compare__table th{width:90px;color:#6b625c;font-weight:700}
+.muted{color:#8a7e74}
+.compare__note{background:rgba(240,212,138,.12);border:1px solid rgba(240,212,138,.28);border-radius:16px;padding:18px;color:#fff}
+.compare__note h5{margin:0 0 8px;color:#f0d48a}
+.compare__note p{margin:0;color:rgba(255,255,255,.78);font-size:13px}
+
+/* Menu */
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dish{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:.2s}
+.dish:hover{transform:translateY(-4px);box-shadow:var(--shadow2)}
+.dish--large{grid-column:span 2}
+.dish__img{height:148px;display:grid;place-items:center;font-size:48px;color:#fff}
+.dish--large .dish__img{height:168px;font-size:56px}
+.dish__body{padding:16px}
+.badge{display:inline-block;background:var(--vermilion);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 8px;border-radius:999px;margin-bottom:8px}
+.dish h3{margin:0 0 6px;font-family:"Shippori Mincho",serif;font-size:16px}
+.dish p{margin:0;color:#5a524c;font-size:13px}
+.price{display:inline-block;margin-top:10px;font-weight:700;color:var(--indigo);font-size:13px}
+.tip{margin-top:18px;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:18px}
+.tip h4{margin:0 0 10px;font-size:14px}
+.tip ol{margin:0;padding-left:18px;font-size:13px;color:#3a332e}
+.tip li{margin:4px 0}
+
+/* Shops */
+.filter{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.filter__btn{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:13px;cursor:pointer}
+.filter__btn.is-active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.shops{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.shop{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:.2s}
+.shop.is-hidden{display:none}
+.shop__img{height:140px;display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,#fdfaf6,#ece0c8)}
+.shop__body{padding:16px}
+.shop__meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+.tag--gold{background:var(--gold);color:#fff;border-color:var(--gold)}
+.tag--blue{background:var(--lake);color:#fff;border-color:var(--lake)}
+.shop h3{margin:0 0 6px;font-family:"Shippori Mincho",serif;font-size:16px}
+.shop__desc{margin:0;color:#5a524c;font-size:13px}
+.shop__info{display:flex;flex-direction:column;gap:4px;margin-top:10px;font-size:12px;color:#6b625c}
+.shops-note{text-align:center;color:#8a7e74;font-size:12px;margin-top:14px}
+
+/* Buy */
+.buy-grid{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:16px}
+.buy-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.buy-card--main{background:linear-gradient(180deg,#1a1a18,#2a2a28);color:#fff;border-color:#2a2a28}
+.buy-card--main ul{margin:10px 0 14px;padding-left:18px;color:rgba(255,255,255,.85);font-size:13px}
+.buy-card__icon{font-size:28px}
+.buy-card h3{margin:8px 0 6px;font-family:"Shippori Mincho",serif}
+.buy-card p{margin:0;color:#5a524c;font-size:13px}
+.buy-card--main p{color:rgba(255,255,255,.72)}
+
+/* Two col */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.season{display:grid;gap:14px;margin-top:14px}
+.season__item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:16px}
+.season__item h4{margin:0 0 6px;color:#fff;font-size:14px}
+.season__item h4 span{font-weight:400;color:#f0d48a;font-size:12px;margin-left:6px}
+.season__item p{margin:0;color:rgba(255,255,255,.72);font-size:13px}
+.faq{background:#fff;color:var(--ink);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.faq h3{margin:0 0 12px;font-family:"Shippori Mincho",serif}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;background:var(--paper)}
+.faq summary{font-weight:700;cursor:pointer;font-size:13px}
+.faq p{margin:8px 0 0;color:#5a524c;font-size:13px}
+
+/* Access */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.map-placeholder{
+  position:relative;height:260px;background:linear-gradient(135deg,#e8f0f6,#cfe0ec);
+  border:1px solid var(--line);border-radius:16px;overflow:hidden;
+}
+.map-dot{position:absolute;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:4px 8px;font-size:11px;font-weight:700;box-shadow:var(--shadow)}
+.map-dot.hamamatsu{left:22%;top:38%}
+.map-dot.lake{left:46%;top:52%;background:var(--lake);color:#fff;border-color:var(--lake)}
+.map-dot.kosai{left:68%;top:32%}
+.map-dot.hasi{left:48%;top:18%;background:var(--gold);color:#fff;border-color:var(--gold)}
+.map-line{position:absolute;left:10%;right:10%;top:50%;height:2px;background:repeating-linear-gradient(90deg, var(--ink) 0 8px, transparent 8px 14px);opacity:.3}
+.map-note{font-size:12px;color:#6b625c;margin-top:8px;text-align:center}
+.access__routes{display:grid;gap:14px}
+.route{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.route h4{margin:0 0 6px;font-size:14px}
+.route p{margin:2px 0;font-size:13px}
+.route--links{display:flex;gap:12px;flex-wrap:wrap;background:var(--cream)}
+.route--links a{font-weight:700;color:var(--indigo);font-size:13px;text-decoration:underline;text-underline-offset:3px}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#0f2438,#1b3a52 55%, #2a6b8a);color:#fff;padding:56px 0;text-align:center}
+.cta__inner h2{font-family:"Shippori Mincho",serif;font-size:clamp(22px,4vw,30px);line-height:1.4;margin:0 0 8px}
+.cta__inner p{color:rgba(255,255,255,.78);margin:0 0 18px}
+.cta__btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* Footer */
+.footer{background:#0f0f0e;color:rgba(255,255,255,.7);padding:28px 0}
+.footer__inner{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:20px;align-items:start}
+.footer__brand{display:flex;gap:12px;align-items:center}
+.footer__brand .logo__mark{background:#fff;color:var(--ink)}
+.footer__brand strong{color:#fff;font-family:"Shippori Mincho",serif}
+.footer__brand p{margin:2px 0 0;font-size:11px;letter-spacing:.08em}
+.footer__links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}
+.footer__links a{color:rgba(255,255,255,.8)}
+.footer__links a:hover{color:#fff}
+.footer__meta{font-size:11px;line-height:1.7}
+.footer__meta a{color:#f0d48a;text-decoration:underline}
+
+/* Responsive */
+@media (max-width: 960px){
+  .nav,.header__cta{display:none}
+  .hamburger{display:flex}
+  .header.is-open .nav{
+    display:flex;position:absolute;left:0;right:0;top:68px;
+    background:rgba(253,250,246,.98);backdrop-filter:blur(12px);
+    flex-direction:column;padding:16px 20px;border-bottom:1px solid var(--line);
+    gap:14px;
+  }
+  .header.is-open .header__cta{display:inline-flex;margin-left:auto}
+  .story,.compare,.two-col,.access{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .dish--large{grid-column:span 1}
+  .shops{grid-template-columns:1fr 1fr}
+  .buy-grid{grid-template-columns:1fr}
+  .footer__inner{grid-template-columns:1fr}
+}
+@media (max-width: 600px){
+  .menu-grid,.shops{grid-template-columns:1fr}
+  .hero__stats{grid-template-columns:1fr 1fr 1fr}
+  .mini-cards{grid-template-columns:1fr 1fr 1fr}
+}
