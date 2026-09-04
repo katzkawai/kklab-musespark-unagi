@@ -25,3 +25,7 @@ python3 -m http.server 8000
 3. 次回 push で `https://<user>.github.io/<repo>/` に公開されます
 
 手動で Pages を有効化する場合: `Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main / root`
+
+## 作成について
+
+このサイトは [Muse Spark 1.2](https://www.llama.com/)（Meta）で作成されました。
