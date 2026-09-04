@@ -4,26 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>浜名湖うなぎ | 湖が育てた、日本一のうなぎ</title>
-  <meta name="description" content="浜名湖うなぎの公式紹介サイト。120年の養殖の歴史、職人の技、絶品の蒲焼、白焼き、うな重。名店ガイドとお取り寄せ情報、アクセスまで。" />
+  <meta name="description" content="浜名湖うなぎの公式紹介サイト。120年の養殖の歴史、職人の技、絶品の蒲焼・白焼き・うな重。名店ガイド、お取り寄せ、アクセスまで。" />
+  <meta name="theme-color" content="#1a1a18" />
   <meta property="og:title" content="浜名湖うなぎ | 湖が育てた、日本一のうなぎ" />
   <meta property="og:description" content="静岡県浜名湖で120年受け継がれる養鰻の物語。ふっくら香ばしい浜名湖うなぎを味わう旅へ。" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1a18'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='18' fill='%23fdfaf6'%3E鰻%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "浜名湖うなぎ",
+    "description": "静岡県浜名湖のうなぎ養殖120年の歴史と名店ガイド",
+    "address": { "@type": "PostalAddress", "addressRegion": "静岡県", "addressLocality": "浜松市" }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="header__inner">
-      <a class="logo" href="#">
-        <span class="logo__mark">鰻</span>
+      <a class="logo" href="#" aria-label="浜名湖うなぎ トップ">
+        <span class="logo__mark" aria-hidden="true">鰻</span>
         <span class="logo__text">
           <span class="logo__title">浜名湖うなぎ</span>
           <span class="logo__sub">HAMANAKO UNAGI</span>
         </span>
       </a>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="主ナビゲーション">
         <a href="#story">物語</a>
         <a href="#feature">こだわり</a>
         <a href="#menu">味わい方</a>
@@ -32,18 +48,19 @@
         <a href="#access">アクセス</a>
       </nav>
       <a class="btn btn--sm header__cta" href="#shops">名店を探す</a>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
+  <main id="main">
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__overlay"></div>
+  <section class="hero" aria-label="ヒーロー">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow">浜名湖が育てた、120年の伝統</p>
+      <p class="hero__eyebrow"><span class="hero__eyebrow-line" aria-hidden="true"></span>浜名湖が育てた、120年の伝統</p>
       <h1 class="hero__title">
         <span>湖が育てた、</span>
         <span class="hero__accent">日本一のうなぎ。</span>
@@ -53,27 +70,27 @@
         <a href="#shops" class="btn btn--primary">名店で味わう</a>
         <a href="#story" class="btn btn--ghost">物語を知る</a>
       </div>
-      <div class="hero__stats">
-        <div class="stat"><span class="stat__num">120</span><span class="stat__label">年の歴史<small>since 1900</small></span></div>
-        <div class="stat"><span class="stat__num">No.1</span><span class="stat__label">養殖発祥の地</span></div>
-        <div class="stat"><span class="stat__num">100+</span><span class="stat__label">軒の専門店</span></div>
+      <div class="hero__stats" role="list" aria-label="浜名湖うなぎの実績">
+        <div class="stat" role="listitem"><span class="stat__num">120</span><span class="stat__label">年の歴史<small>since 1900</small></span></div>
+        <div class="stat" role="listitem"><span class="stat__num">No.1</span><span class="stat__label">養殖発祥の地</span></div>
+        <div class="stat" role="listitem"><span class="stat__num">100+</span><span class="stat__label">軒の専門店</span></div>
       </div>
     </div>
-    <div class="hero__scroll">SCROLL</div>
+    <div class="hero__scroll" aria-hidden="true">SCROLL</div>
   </section>
 
   <!-- Catch copy band -->
-  <section class="band">
+  <div class="band" role="note">
     <div class="band__inner">
       <p>外はパリッと、中はふわっと。炭火が香る、浜名湖の贅沢。</p>
     </div>
-  </section>
+  </div>
 
   <!-- Story -->
   <section class="section" id="story">
     <div class="container">
       <div class="section-head">
-        <p class="kicker">STORY</p>
+        <p class="kicker"><span class="kicker__deco" aria-hidden="true"></span>STORY</p>
         <h2 class="section-title">浜名湖と うなぎの物語</h2>
         <p class="section-lead">日本で初めてうなぎ養殖に成功した湖。挑戦の歴史が、今の美味しさをつくった。</p>
       </div>
@@ -96,14 +113,24 @@
               <p>稚魚を大切に育て、備長炭で一気に焼き上げる。養鰻家と職人、二つの職人技が浜名湖の味を守る。</p>
             </div>
           </div>
-          <div class="quote">
-            <p>「浜名湖のうなぎは、湖が半分、人が半分つくる。」</p>
-            <span>— 浜名湖養魚漁業協同組合</span>
-          </div>
+          <figure class="quote">
+            <blockquote><p>「浜名湖のうなぎは、湖が半分、人が半分つくる。」</p></blockquote>
+            <figcaption>— 浜名湖養魚漁業協同組合</figcaption>
+          </figure>
         </div>
         <div class="story__visual">
           <div class="lake-card">
-            <div class="lake-img">🌊</div>
+            <div class="lake-img" aria-hidden="true">
+              <svg viewBox="0 0 120 72" width="120" height="72" role="img" aria-label="浜名湖イメージ">
+                <path d="M6 48 C 22 30, 40 52, 60 38 C 78 26, 96 42, 114 28" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".28"/>
+                <path d="M6 56 C 26 40, 48 58, 68 44 C 86 32, 102 48, 114 36" fill="none" stroke="#1a1a18" stroke-width="1.2" opacity=".18"/>
+                <ellipse cx="60" cy="58" rx="42" ry="7" fill="#1a1a18" opacity=".08"/>
+                <g fill="none" stroke="#c8a24a" stroke-width="1.1" opacity=".9">
+                  <path d="M42 22 l 5 8 l -8 -3 l 10 1 l -5 7"/>
+                  <path d="M72 16 l 4 7 l -7 -2 l 9 1 l -4 6"/>
+                </g>
+              </svg>
+            </div>
             <div class="lake-info">
               <h4>浜名湖</h4>
               <p>静岡県西部に広がる汽水湖。面積65km²。海と湖が交わる独自の生態系が、うなぎを健やかに育む。</p>
@@ -115,9 +142,24 @@
             </div>
           </div>
           <div class="mini-cards">
-            <div class="mini"><span>🚤</span><p>湖上養殖いけす</p></div>
-            <div class="mini"><span>🔥</span><p>備長炭 手焼き</p></div>
-            <div class="mini"><span>👨‍🍳</span><p>割き三年 焼き一生</p></div>
+            <div class="mini">
+              <span class="mini__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12 c 3-3 6 3 9 0 s 6-3 9 0"/><path d="M3 16 c 3-3 6 3 9 0 s 6-3 9 0" opacity=".55"/><path d="M7 8 l2-3 2 3" /></svg>
+              </span>
+              <p>湖上養殖いけす</p>
+            </div>
+            <div class="mini">
+              <span class="mini__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 l2 5 5 1-4 4 1 6-4-3-4 3 1-6-4-4 5-1z" opacity=".9"/><path d="M8 21 h8"/></svg>
+              </span>
+              <p>備長炭 手焼き</p>
+            </div>
+            <div class="mini">
+              <span class="mini__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20 c1-4 5-6 7-6 s6 2 7 6"/></svg>
+              </span>
+              <p>割き三年 焼き一生</p>
+            </div>
           </div>
         </div>
       </div>
@@ -128,23 +170,29 @@
   <section class="section section--dark" id="feature">
     <div class="container">
       <div class="section-head section-head--light">
-        <p class="kicker">FEATURE</p>
+        <p class="kicker kicker--light"><span class="kicker__deco" aria-hidden="true"></span>FEATURE</p>
         <h2 class="section-title">なぜ浜名湖うなぎは美味しいのか</h2>
         <p class="section-lead">水、餌、技。3つのこだわりが生む、とろける脂と香ばしさ。</p>
       </div>
       <div class="features">
         <div class="feat">
-          <div class="feat__icon">💧</div>
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f0d48a" stroke-width="1.5"><path d="M12 3 C 10 7, 6 9, 6 13 a6 6 0 0 0 12 0 C18 9, 14 7, 12 3"/><path d="M8 14 c1 1.5 2.5 2.2 4 2.2 s3-.7 4-2.2" opacity=".7"/></svg>
+          </div>
           <h3>汽水が育む旨み</h3>
           <p>海水と淡水が混じる浜名湖。水温変化が少なくミネラル豊富な環境で、身が引き締まり脂が上品にのる。</p>
         </div>
         <div class="feat">
-          <div class="feat__icon">🐟</div>
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f0d48a" stroke-width="1.5"><ellipse cx="12" cy="13" rx="6" ry="4"/><path d="M9 9 l3-3 3 3"/><path d="M6 13 h12" opacity=".5"/></svg>
+          </div>
           <h3>厳選された餌と管理</h3>
           <p>魚粉主体の配合飼料と徹底した水質管理。ストレスをかけず健康に育てることで、臭みなく旨みが濃い。</p>
         </div>
         <div class="feat">
-          <div class="feat__icon">🔥</div>
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f0d48a" stroke-width="1.5"><path d="M7 17 L12 7 L17 17"/><path d="M6 17 h12"/><path d="M10 13 h4" opacity=".7"/></svg>
+          </div>
           <h3>関西風 地焼きの技</h3>
           <p>蒸さずに備長炭で一気に焼く地焼き。外はパリッと香ばしく、中はふっくらジューシーに仕上がる。</p>
         </div>
@@ -171,13 +219,15 @@
   <section class="section" id="menu">
     <div class="container">
       <div class="section-head">
-        <p class="kicker">HOW TO ENJOY</p>
+        <p class="kicker"><span class="kicker__deco" aria-hidden="true"></span>HOW TO ENJOY</p>
         <h2 class="section-title">浜名湖うなぎの味わい方</h2>
         <p class="section-lead">一尾から生まれる多彩な料理。まずは定番から、通の楽しみ方まで。</p>
       </div>
       <div class="menu-grid">
         <article class="dish dish--large">
-          <div class="dish__img" style="background:linear-gradient(135deg,#3b2312,#8b4513)">🍱</div>
+          <div class="dish__img" style="background:linear-gradient(135deg,#3b2312,#8b4513)" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4"><rect x="8" y="14" width="32" height="20" rx="3"/><path d="M8 18 h32"/><path d="M14 26 h20"/><path d="M18 22 v8 M24 22 v8 M30 22 v8" opacity=".6"/></svg>
+          </div>
           <div class="dish__body">
             <span class="badge">人気 No.1</span>
             <h3>うな重</h3>
@@ -186,7 +236,9 @@
           </div>
         </article>
         <article class="dish">
-          <div class="dish__img" style="background:linear-gradient(135deg,#1a2a3a,#4a6a8a)">🐍</div>
+          <div class="dish__img" style="background:linear-gradient(135deg,#1a2a3a,#4a6a8a)" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4"><path d="M12 30 C 16 18, 24 16, 36 20"/><path d="M12 32 C 18 24, 28 22, 36 26" opacity=".6"/><circle cx="14" cy="30" r="2" fill="rgba(255,255,255,.9)" stroke="none"/></svg>
+          </div>
           <div class="dish__body">
             <h3>白焼き</h3>
             <p>タレをかけず塩とわさびで。浜名湖うなぎ本来の脂の甘みをダイレクトに味わう通の一品。</p>
@@ -194,7 +246,9 @@
           </div>
         </article>
         <article class="dish">
-          <div class="dish__img" style="background:linear-gradient(135deg,#2d4a22,#7a9a3a)">🍚</div>
+          <div class="dish__img" style="background:linear-gradient(135deg,#2d4a22,#7a9a3a)" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4"><ellipse cx="24" cy="28" rx="14" ry="10"/><path d="M16 22 Q24 16 32 22"/><path d="M18 28 Q24 32 30 28" opacity=".6"/></svg>
+          </div>
           <div class="dish__body">
             <h3>ひつまぶし</h3>
             <p>刻んだ蒲焼を薬味・出汁で三通りに。最後はお茶漬けでさらりと。名古屋とは一味違う浜名湖流。</p>
@@ -202,7 +256,9 @@
           </div>
         </article>
         <article class="dish">
-          <div class="dish__img" style="background:linear-gradient(135deg,#4a2a1a,#c67a3a)">🥚</div>
+          <div class="dish__img" style="background:linear-gradient(135deg,#4a2a1a,#c67a3a)" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4"><rect x="10" y="16" width="28" height="16" rx="8"/><path d="M16 20 h16 M16 24 h16 M16 28 h10" opacity=".6"/></svg>
+          </div>
           <div class="dish__body">
             <h3>う巻き</h3>
             <p>ふわふわの出汁巻き卵で蒲焼を巻いた逸品。お酒のアテにも、子どものおかずにも。</p>
@@ -210,7 +266,9 @@
           </div>
         </article>
         <article class="dish">
-          <div class="dish__img" style="background:linear-gradient(135deg,#3a3a2a,#8a7a5a)">🍶</div>
+          <div class="dish__img" style="background:linear-gradient(135deg,#3a3a2a,#8a7a5a)" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4"><path d="M24 10 v28 M18 16 l6-6 6 6"/><path d="M14 34 h20" /></svg>
+          </div>
           <div class="dish__body">
             <h3>うなぎの肝焼き</h3>
             <p>一尾から一つしか取れない希少な肝を串焼きに。ほろ苦く、酒が進む大人の味。</p>
@@ -218,7 +276,9 @@
           </div>
         </article>
         <article class="dish">
-          <div class="dish__img" style="background:linear-gradient(135deg,#2a3a4a,#6a8aaa)">🍘</div>
+          <div class="dish__img" style="background:linear-gradient(135deg,#2a3a4a,#6a8aaa)" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4"><rect x="8" y="20" width="32" height="14" rx="2"/><path d="M12 20 Q24 12 36 20"/><path d="M14 26 h20 M14 30 h20" opacity=".5"/></svg>
+          </div>
           <div class="dish__body">
             <h3>うなぎパイ</h3>
             <p>浜名湖みやげの定番。うなぎエキス入りパイは夜のお菓子として全国で愛される。</p>
@@ -227,7 +287,7 @@
         </article>
       </div>
       <div class="tip">
-        <h4>💡 初めての方へのおすすめの食べ方</h4>
+        <h4><span class="tip__icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2 v4"/><circle cx="8" cy="5.2" r="1" fill="currentColor" stroke="none"/></svg></span> 初めての方へのおすすめの食べ方</h4>
         <ol>
           <li><strong>一口目はそのまま</strong> — 何もつけずに香ばしさを味わう</li>
           <li><strong>二口目は山椒と</strong> — 粉山椒をひと振りで味が引き締まる</li>
@@ -241,69 +301,69 @@
   <section class="section section--cream" id="shops">
     <div class="container">
       <div class="section-head">
-        <p class="kicker">RESTAURANTS</p>
+        <p class="kicker"><span class="kicker__deco" aria-hidden="true"></span>RESTAURANTS</p>
         <h2 class="section-title">浜名湖 うなぎ名店ガイド</h2>
         <p class="section-lead">地元民が通う老舗から、湖を望む絶景店まで。厳選6軒。</p>
-        <div class="filter" id="filter">
-          <button class="filter__btn is-active" data-filter="all">すべて</button>
-          <button class="filter__btn" data-filter="hamamatsu">浜松</button>
-          <button class="filter__btn" data-filter="kosai">湖西・雄踏</button>
-          <button class="filter__btn" data-filter="view">絶景</button>
+        <div class="filter" id="filter" role="group" aria-label="エリアで絞り込む">
+          <button class="filter__btn is-active" data-filter="all" aria-pressed="true">すべて</button>
+          <button class="filter__btn" data-filter="hamamatsu" aria-pressed="false">浜松</button>
+          <button class="filter__btn" data-filter="kosai" aria-pressed="false">湖西・雄踏</button>
+          <button class="filter__btn" data-filter="view" aria-pressed="false">絶景</button>
         </div>
       </div>
       <div class="shops" id="shopsGrid">
         <article class="shop" data-area="hamamatsu">
-          <div class="shop__img">🏯</div>
+          <div class="shop__img" aria-hidden="true"><svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".7"><path d="M8 38 L8 16 L24 8 L40 16 L40 38"/><path d="M16 38 V26 H20 V38"/><path d="M28 38 V26 H32 V38"/><rect x="18" y="12" width="12" height="6" rx="1"/></svg></div>
           <div class="shop__body">
             <div class="shop__meta"><span class="tag">浜松</span><span class="tag tag--gold">創業1890年</span></div>
             <h3>うなぎの藤田</h3>
             <p class="shop__desc">浜松駅から徒歩5分。創業130年、継ぎ足しのタレと炭火地焼きが自慢。特上うな重は身が二段。</p>
-            <div class="shop__info"><span>📍 浜松市中央区</span><span>⏰ 11:00-14:30 / 17:00-20:00</span></div>
+            <div class="shop__info"><span>浜松市中央区</span><span>11:00-14:30 / 17:00-20:00</span></div>
           </div>
         </article>
         <article class="shop" data-area="kosai view">
-          <div class="shop__img">🌅</div>
+          <div class="shop__img" aria-hidden="true"><svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".7"><path d="M4 34 Q24 18 44 34"/><path d="M24 12 A 8 8 0 1 0 24 28 A 8 8 0 0 0 24 12"/><path d="M4 38 H44" opacity=".5"/></svg></div>
           <div class="shop__body">
             <div class="shop__meta"><span class="tag">湖西</span><span class="tag tag--blue">湖畔</span></div>
             <h3>かねはち 浜名湖本店</h3>
             <p class="shop__desc">湖を一望するテラス席が人気。活うなぎを目の前で捌くライブキッチン。白焼きが絶品。</p>
-            <div class="shop__info"><span>📍 湖西市鷲津</span><span>⏰ 11:00-15:00 / 17:00-21:00</span></div>
+            <div class="shop__info"><span>湖西市鷲津</span><span>11:00-15:00 / 17:00-21:00</span></div>
           </div>
         </article>
         <article class="shop" data-area="kosai">
-          <div class="shop__img">🏠</div>
+          <div class="shop__img" aria-hidden="true"><svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".7"><path d="M8 36 H40"/><path d="M12 36 V22 H36 V36"/><path d="M10 22 L24 12 L38 22"/><circle cx="24" cy="29" r="3"/></svg></div>
           <div class="shop__body">
             <div class="shop__meta"><span class="tag">雄踏</span><span class="tag tag--gold">養殖発祥</span></div>
             <h3>浜名湖養魚 うなぎ処 雄踏</h3>
             <p class="shop__desc">養鰻場直営。朝獲れをその日に提供する鮮度が命。養殖いけす見学も可能（要予約）。</p>
-            <div class="shop__info"><span>📍 浜松市雄踏町</span><span>⏰ 11:00-14:00 ※売切次第終了</span></div>
+            <div class="shop__info"><span>浜松市雄踏町</span><span>11:00-14:00 ※売切次第終了</span></div>
           </div>
         </article>
         <article class="shop" data-area="hamamatsu">
-          <div class="shop__img">🔥</div>
+          <div class="shop__img" aria-hidden="true"><svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".7"><path d="M18 6 L24 14 L30 6"/><path d="M16 14 H32"/><path d="M20 14 V34"/><path d="M28 14 V34"/><path d="M14 38 H34" /></svg></div>
           <div class="shop__body">
             <div class="shop__meta"><span class="tag">浜松</span><span class="tag">予約推奨</span></div>
             <h3>炭焼き あつみ</h3>
-            <p class="shop__desc">備長炭一本焼きにこだわる職人の店。関西風パリッと仕上げ。肝焼きと日本酒の pairing が評判。</p>
-            <div class="shop__info"><span>📍 浜松市中区</span><span>⏰ 11:30-14:00 / 17:30-20:30 定休水</span></div>
+            <p class="shop__desc">備長炭一本焼きにこだわる職人の店。関西風パリッと仕上げ。肝焼きと日本酒のペアリングが評判。</p>
+            <div class="shop__info"><span>浜松市中区</span><span>11:30-14:00 / 17:30-20:30 定休水</span></div>
           </div>
         </article>
         <article class="shop" data-area="hamamatsu view">
-          <div class="shop__img">⛩️</div>
+          <div class="shop__img" aria-hidden="true"><svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".7"><path d="M12 36 L24 18 L36 36"/><path d="M18 36 V28 H30 V36"/><circle cx="24" cy="14" r="2.5" fill="#1a1a18" stroke="none" opacity=".18"/><path d="M6 40 H42" opacity=".4"/></svg></div>
           <div class="shop__body">
             <div class="shop__meta"><span class="tag">浜松</span><span class="tag tag--blue">絶景</span></div>
             <h3>浜名湖うなぎ 湖畔の宿 きよ</h3>
             <p class="shop__desc">舘山寺温泉の老舗宿が営む食事処。湖上の夕日を見ながら味わううな重は格別。</p>
-            <div class="shop__info"><span>📍 浜松市舘山寺町</span><span>⏰ 11:00-15:00</span></div>
+            <div class="shop__info"><span>浜松市舘山寺町</span><span>11:00-15:00</span></div>
           </div>
         </article>
         <article class="shop" data-area="kosai">
-          <div class="shop__img">🍱</div>
+          <div class="shop__img" aria-hidden="true"><svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a18" stroke-width="1.4" opacity=".7"><rect x="10" y="16" width="28" height="18" rx="2"/><path d="M10 20 H38"/><path d="M16 26 h8 M16 30 h8" opacity=".6"/><path d="M28 26 h6 M28 30 h6" opacity=".6"/></svg></div>
           <div class="shop__body">
             <div class="shop__meta"><span class="tag">湖西</span><span class="tag">テイクアウト可</span></div>
             <h3>うなぎの井口</h3>
             <p class="shop__desc">大正創業。弁当・お取り寄せ蒲焼が人気。秘伝ダレは持ち帰り用も販売。</p>
-            <div class="shop__info"><span>📍 湖西市新所</span><span>⏰ 10:00-19:00</span></div>
+            <div class="shop__info"><span>湖西市新所</span><span>10:00-19:00</span></div>
           </div>
         </article>
       </div>
@@ -315,29 +375,29 @@
   <section class="section" id="buy">
     <div class="container">
       <div class="section-head">
-        <p class="kicker">SOUVENIR & ONLINE</p>
+        <p class="kicker"><span class="kicker__deco" aria-hidden="true"></span>SOUVENIR &amp; ONLINE</p>
         <h2 class="section-title">お家でも、浜名湖うなぎ</h2>
         <p class="section-lead">お取り寄せ蒲焼から定番みやげまで。贈り物にも。</p>
       </div>
       <div class="buy-grid">
         <div class="buy-card buy-card--main">
-          <div class="buy-card__icon">📦</div>
+          <div class="buy-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="8" width="18" height="10" rx="1.5"/><path d="M7 8 V6 h10 V8"/><path d="M8 13 h8" opacity=".7"/></svg></div>
           <h3>お取り寄せ 蒲焼</h3>
           <p>真空パックで急速冷凍。湯煎10分で焼きたての香りが蘇る。ギフト箱入りも。</p>
           <ul>
             <li>1尾（約160g） ¥3,200〜</li>
             <li>2尾セット（タレ・山椒付） ¥6,500〜</li>
           </ul>
-          <a class="btn btn--dark" href="#" onclick="alert('デモサイトのため外部リンクは無効です。実際は各店舗のオンラインショップへ遷移します。');return false;">オンラインショップを見る</a>
+          <a class="btn btn--paper" href="#" onclick="alert('デモサイトのため外部リンクは無効です。実際は各店舗のオンラインショップへ遷移します。');return false;">オンラインショップを見る</a>
         </div>
         <div class="buy-card">
-          <div class="buy-card__icon">🥧</div>
+          <div class="buy-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="8" rx="1"/><path d="M6 10 C6 7, 9 5, 12 7 C15 5, 18 7, 18 10" /></svg></div>
           <h3>うなぎパイ</h3>
           <p>春華堂の夜のお菓子。サクサク生地にうなぎエキスとガーリックの香り。</p>
           <span class="price">12枚入 ¥1,080</span>
         </div>
         <div class="buy-card">
-          <div class="buy-card__icon">🧴</div>
+          <div class="buy-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3 h6 v3 H9 z"/><path d="M8 6 H16 L15 21 H9 L8 6"/><path d="M11 11 v6 M13 11 v6" opacity=".6"/></svg></div>
           <h3>うなぎエキス・コラーゲン</h3>
           <p>浜名湖うなぎのコラーゲンスープや蒲焼のタレも人気。料理の隠し味に。</p>
           <span class="price">¥800〜</span>
@@ -351,7 +411,7 @@
     <div class="container">
       <div class="two-col">
         <div>
-          <p class="kicker kicker--light">SEASON</p>
+          <p class="kicker kicker--light"><span class="kicker__deco" aria-hidden="true"></span>SEASON</p>
           <h2 class="section-title section-title--light">旬と土用の丑の日</h2>
           <div class="season">
             <div class="season__item">
@@ -391,36 +451,35 @@
   <section class="section" id="access">
     <div class="container">
       <div class="section-head">
-        <p class="kicker">ACCESS</p>
+        <p class="kicker"><span class="kicker__deco" aria-hidden="true"></span>ACCESS</p>
         <h2 class="section-title">浜名湖へのアクセス</h2>
         <p class="section-lead">東京から新幹線で約90分。名古屋・大阪からも好アクセス。</p>
       </div>
       <div class="access">
         <div class="access__map">
-          <!-- CSS only map placeholder -->
-          <div class="map-placeholder">
+          <div class="map-placeholder" role="img" aria-label="浜名湖周辺略図">
             <div class="map-dot hamamatsu"><span>浜松駅</span></div>
             <div class="map-dot lake"><span>浜名湖</span></div>
             <div class="map-dot kosai"><span>鷲津</span></div>
             <div class="map-dot hasi"><span>舘山寺</span></div>
-            <div class="map-line"></div>
+            <div class="map-line" aria-hidden="true"></div>
           </div>
           <p class="map-note">浜名湖は静岡県と愛知県の県境。東名高速「浜松西IC」/ 新幹線「浜松駅」が最寄り。</p>
         </div>
         <div class="access__routes">
           <div class="route">
-            <h4>🚄 新幹線で</h4>
+            <h4><span class="route__icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="5" width="12" height="6" rx="1"/><path d="M4 8 h8 M6 5 V3 M10 5 V3"/><circle cx="5.5" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="10.5" cy="11" r="1" fill="currentColor" stroke="none"/></svg></span> 新幹線で</h4>
             <p><strong>東京 → 浜松</strong> ひかり約90分 / こだま約120分</p>
             <p><strong>名古屋 → 浜松</strong> ひかり約30分</p>
             <p class="muted">浜松駅から各店へはバス・タクシーで15〜30分</p>
           </div>
           <div class="route">
-            <h4>🚗 車で</h4>
+            <h4><span class="route__icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 11 H13"/><path d="M5 11 V7 H11 V11"/><path d="M7 7 V5 H9 V7"/><circle cx="6" cy="12.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="10" cy="12.5" r="1.1" fill="currentColor" stroke="none"/></svg></span> 車で</h4>
             <p><strong>東名高速 浜松西IC</strong> から各店へ10〜20分</p>
             <p><strong>新東名 浜松いなさIC</strong> から湖西エリアへ15分</p>
           </div>
           <div class="route">
-            <h4>✈️ 飛行機で</h4>
+            <h4><span class="route__icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 12 L8 4 L14 12"/><path d="M6 12 V9 H10 V12"/></svg></span> 飛行機で</h4>
             <p><strong>富士山静岡空港</strong> から車で約70分</p>
           </div>
           <div class="route route--links">
@@ -433,7 +492,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta">
+  <section class="cta" aria-label="来訪を促す">
     <div class="container cta__inner">
       <h2>さあ、浜名湖で<br>一生もののうなぎに出会おう。</h2>
       <p>湖と職人が120年かけて磨いた味を、あなたの舌で確かめてください。</p>
@@ -443,25 +502,26 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="logo__mark">鰻</span>
+        <span class="logo__mark" aria-hidden="true">鰻</span>
         <div>
           <strong>浜名湖うなぎ</strong>
           <p>HAMANAKO UNAGI — 湖が育てた、日本一のうなぎ</p>
         </div>
       </div>
-      <div class="footer__links">
+      <nav class="footer__links" aria-label="フッターナビ">
         <a href="#story">物語</a>
         <a href="#feature">こだわり</a>
         <a href="#menu">味わい方</a>
         <a href="#shops">名店</a>
         <a href="#access">アクセス</a>
-      </div>
+      </nav>
       <div class="footer__meta">
-        <p>本サイトは浜名湖うなぎの魅力を紹介するデモサイトです。店舗情報は架空のサンプルを含みます。</p>
+        <p>本サイトは浜名湖うなぎの魅力を紹介するデモサイトです。店舗情報・価格は架空のサンプルを含みます。</p>
         <p>© 2026 Hamanako Unagi Project. Built for GitHub Pages.</p>
         <p><a href="https://github.com/" target="_blank" rel="noopener">View on GitHub</a></p>
       </div>
