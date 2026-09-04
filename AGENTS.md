@@ -35,4 +35,4 @@ No tests, lint, typecheck, or package manager. Verify changes visually in browse
 - Keep it build-free: do not introduce npm/webpack/vite unless explicitly requested.
 - Preserve relative paths and `.nojekyll`.
 - Content is Japanese; maintain existing tone/sections (story/feature/menu/shops/buy/access).
-- Demo data: shop cards and pricing are sample/fictional — note in footer already discloses this.
+- Demo data: shop cards and pricing are sample/fictional — the top `.demo-bar` notice and footer disclose this.
